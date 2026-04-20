@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ☕ KopiNusantara - Premium Indonesian Coffee
 
-## Getting Started
+> **E-Commerce Website** — Menghadirkan kopi premium terbaik dari seluruh Nusantara, dari petani langsung ke rumah Anda.
 
-First, run the development server:
+![KopiNusantara Preview](https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?w=1200\&h=630\&fit=crop)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📋 Tentang Proyek
+
+**KopiNusantara** adalah website e-commerce berbasis **Next.js** untuk menjual kopi asli Indonesia dengan tampilan premium dan performa optimal.
+
+### ✨ Fitur Utama
+
+* 🎨 Desain elegan (dark + gold theme)
+* ⚡ Performa cepat & animasi smooth
+* 📱 Fully responsive (mobile-first)
+* 🔧 Struktur modular & mudah dikembangkan
+
+---
+
+## 🎯 Section Website
+
+| Section      | Deskripsi            |
+| ------------ | -------------------- |
+| Hero         | Landing utama + CTA  |
+| About        | Story brand & petani |
+| BestSeller   | Produk unggulan      |
+| Features     | Keunggulan produk    |
+| Products     | Daftar kopi          |
+| Testimonials | Review pelanggan     |
+| HowItWorks   | Cara order           |
+| CTA          | Call to action       |
+| Footer       | Kontak & navigasi    |
+
+---
+
+## 🛠️ Tech Stack
+
+* Next.js
+* React
+* Tailwind CSS
+* Framer Motion
+* JavaScript
+
+---
+
+## 📁 Struktur Proyek
+
+```
+nusantara-coffee/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── layout/
+│   │   │   ├── sections/
+│   │   │   └── ui/
+│   │   ├── lib/
+│   │   ├── styles/
+│   │   ├── layout.jsx
+│   │   └── page.jsx
+│   └── types/
+├── public/
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/yourusername/nusantara-coffee.git
+cd nusantara-coffee
+npm install
+npm run dev
+```
 
-## Learn More
+Buka: http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⚙️ Konfigurasi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Path Alias
 
-## Deploy on Vercel
+```json
+"@/*": ["src/app/*"]
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Customization
+
+### Ubah Konten
+
+```js
+export const HERO_CONTENT = {
+  headline: "Nikmati Kopi",
+};
+```
+
+### Ubah Produk
+
+```js
+export const PRODUCTS = [
+  {
+    name: "Gayo Arabica",
+    price: 85000,
+  }
+];
+```
+
+---
+
+## 🌐 Deployment
+
+```bash
+npm install -g vercel
+vercel
+```
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 📞 Contact
+
+* 📧 [info@kopinusantara.com](mailto:info@kopinusantara.com)
+* 📍 Indonesia
+
+---
+
+Built with ☕ untuk pecinta kopi Indonesia

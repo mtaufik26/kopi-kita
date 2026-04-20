@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/lib/utils/cn.js", "src/lib/utils/index.js", "src/lib/animations/variants.js", "src/lib/animations/transitions.js", "src/lib/animations/index.js", "src/lib/hooks/useScrollSpy.js", "src/lib/hooks/useInView.js", "src/lib/hooks/index.js", "src/lib/constants/site.js", "src/lib/constants/navigation.js", "src/lib/constants/index.js", "src/lib/index.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
