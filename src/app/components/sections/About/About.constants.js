@@ -1,17 +1,25 @@
-export const SECTION_LABEL = 'Our Story';
+export const SECTION_LABEL = 'Cerita Kami';
 
 export const HEADLINE = {
-  main: 'Tentang',
-  sub: 'Kopi Kami',
-  description: `Biji kopi kami dipetik langsung dari dataran tinggi Gayo, Toraja, dan Kintamani. Setiap batch di-roasting dengan suhu terkontrol untuk menghasilkan profil rasa yang konsisten. Kami bekerja sama langsung dengan petani lokal, memastikan proses yang adil dan berkelanjutan. Quality control ketat dilakukan di setiap tahap, dari seleksi biji hijau hingga pengemasan premium.`,
+  main: 'Dingin, Segar,',
+  sub: 'Gak Ribet',
+  description: `
+Kopi Kita dibuat buat kamu yang suka kopi tapi gak mau ribet.
+
+Semua menu kami berbasis ice coffee — lebih ringan, lebih fresh, dan cocok diminum kapan aja, apalagi di cuaca panas.
+
+Kami tetap pakai biji kopi lokal dari Gayo, Toraja, dan Kintamani, tapi disajikan dengan cara yang lebih santai dan kekinian.
+
+Mau nemenin kerja, nongkrong, atau sekadar butuh yang segar — Kopi Kita selalu ada.
+`,
 };
 
 export const STATS = [
-  { icon: 'Users', label: 'Petani Mitra', value: '50+' },
-  { icon: 'Coffee', label: 'Varian Kopi', value: '12' },
-  { icon: 'Award', label: 'Pelanggan', value: '5K+' },
+  { icon: 'Users', label: 'Teman Ngopi', value: '5K+' },
+  { icon: 'Coffee', label: 'Menu Ice Coffee', value: '8+' },
+  { icon: 'Award', label: 'Rating', value: '4.8' },
 ];
 
 export const IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1610632380989-680fe40816c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0', alt: 'Coffee roasting' },
+  { src: '/assets/Aboute.png', alt: 'Ice coffee segar' },
 ];

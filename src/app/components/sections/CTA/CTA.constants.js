@@ -1,6 +1,6 @@
 export const CTA_CONTENT = {
-  title: 'Siap Menikmati Kopi Terbaik?',
-  description: 'Dapatkan pengalaman kopi premium langsung dari petani terbaik Indonesia',
-  buttonText: 'Beli Sekarang',
+  title: 'Lagi pengen kopi dingin?',
+  description: 'Langsung aja mampir ke Kopi Kita atau order lewat aplikasi favoritmu',
+  buttonText: 'Lihat Menu',
   buttonHref: '#produk',
 };

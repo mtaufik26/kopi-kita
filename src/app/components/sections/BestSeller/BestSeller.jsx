@@ -1,78 +1,157 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Star, Sparkles, Coffee } from 'lucide-react';
-import { BEST_SELLER } from './BestSeller.constants';
-import { leftContent, rightImage, viewport } from './BestSeller.animations';
+import { motion } from "framer-motion";
+import { Star, Sparkles, Coffee, ShieldCheck, Truck } from "lucide-react";
+import { BEST_SELLER } from "./BestSeller.constants";
+import { leftContent, rightImage, viewport } from "./BestSeller.animations";
 
 export default function BestSeller() {
   return (
-    <section className="py-16 sm:py-20 md:py-28 bg-gradient-to-br from-[#1a1512] to-[#0f0f0f] relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-gold/20 blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-gold/10 blur-3xl" />
+    <section className="relative py-20 sm:py-28 md:py-36 bg-[#0f0f0f] overflow-hidden">
+      
+      {/* Background Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-80 h-80 bg-gold/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-[120px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
-          <motion.div variants={leftContent} initial="hidden" whileInView="visible" viewport={viewport} className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/30 mb-6">
+          {/* LEFT CONTENT */}
+          <motion.div
+            variants={leftContent}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            className="space-y-6 text-center lg:text-left"
+          >
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30">
               <Star className="w-3.5 h-3.5 text-gold fill-gold" />
-              <span className="text-[10px] sm:text-xs text-gold tracking-wider uppercase font-semibold">{BEST_SELLER.badge}</span>
+              <span className="text-xs font-semibold text-gold uppercase tracking-wide">
+                {BEST_SELLER.badge}
+              </span>
               <Sparkles className="w-3.5 h-3.5 text-gold" />
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-4">
+            {/* Title */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-tight">
               <span className="text-white">{BEST_SELLER.title}</span>
               <br />
-              <span className="text-gradient-gold">{BEST_SELLER.subtitle}</span>
+              <span className="text-gradient-gold">
+                {BEST_SELLER.subtitle}
+              </span>
             </h2>
 
-            <div className="flex items-center gap-1 justify-center lg:justify-start mb-4">
-              {[...Array(BEST_SELLER.rating)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-              ))}
-              <span className="text-xs text-gray-400 ml-2">{BEST_SELLER.reviews}</span>
+            {/* Rating */}
+            <div className="flex items-center gap-2 justify-center lg:justify-start">
+              <div className="flex gap-0.5">
+                {[...Array(BEST_SELLER.rating)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                ))}
+              </div>
+              <span className="text-sm text-gray-400">
+                {BEST_SELLER.reviews}
+              </span>
             </div>
 
-            <p className="text-gray-300 leading-relaxed mb-6 text-sm sm:text-base">
+            {/* Description */}
+            <p className="text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
               {BEST_SELLER.description}
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start">
+            {/* Features */}
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
               {BEST_SELLER.features.map((f) => (
-                <span key={f} className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">{f}</span>
+                <span
+                  key={f}
+                  className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200"
+                >
+                  {f}
+                </span>
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              <div className="text-2xl font-bold text-gold">
-                {BEST_SELLER.price}
-                <span className="text-xs text-gray-400 line-through ml-2">{BEST_SELLER.originalPrice}</span>
+            {/* Price */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 justify-center lg:justify-start">
+                <span className="text-3xl sm:text-4xl font-bold text-gold">
+                  {BEST_SELLER.price}
+                </span>
+                <span className="text-sm text-gray-500 line-through">
+                  {BEST_SELLER.originalPrice}
+                </span>
+                <span className="text-xs px-2 py-0.5 rounded bg-gold/20 text-gold">
+                  Hemat
+                </span>
+              </div>
+
+              {/* INFO (SUDAH FIX OFFLINE) */}
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start text-sm text-gray-400">
+
+                <div className="flex items-center gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-emerald-500" />
+                  <span>{BEST_SELLER.stockInfo}</span>
+                </div>
+
+                <div className="flex items-center gap-1.5">
+                  <Truck className="w-3.5 h-3.5 text-gold/70" />
+                  <span className="text-xs">
+                    Bisa order via GoFood / GrabFood
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-gold/70" />
+                  <span className="text-xs">
+                    Fresh dibuat saat dipesan
+                  </span>
+                </div>
+
               </div>
             </div>
+          </motion.div>
 
-            <div className="mt-6 flex items-center gap-2 justify-center lg:justify-start">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-xs text-gray-400">{BEST_SELLER.stockInfo}</span>
+          {/* RIGHT IMAGE */}
+          <motion.div
+            variants={rightImage}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            className="relative flex justify-center"
+          >
+            <div className="relative w-full max-w-md">
+              
+              {/* Image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/60 bg-black/30">
+                <img
+                  src={BEST_SELLER.image}
+                  alt={BEST_SELLER.title}
+                  className="w-full h-auto object-contain transition duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+              </div>
+
+              {/* Badge atas */}
+              <div className="absolute -top-3 -right-3 bg-black/80 rounded-full px-4 py-1 border border-gold/40">
+                <span className="text-xs text-gold flex items-center gap-1">
+                  <Coffee className="w-3.5 h-3.5" />
+                  Lagi Hits 🔥
+                </span>
+              </div>
+
+              {/* Badge bawah */}
+              <div className="absolute -bottom-4 left-6 bg-black/60 rounded-full px-3 py-1 border border-white/10">
+                <span className="text-[10px] text-gray-300 flex items-center gap-1">
+                  <Sparkles className="w-2.5 h-2.5 text-gold" />
+                  Banyak yang repeat order
+                </span>
+              </div>
+
             </div>
           </motion.div>
 
-          <motion.div variants={rightImage} initial="hidden" whileInView="visible" viewport={viewport} className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-              <img src={BEST_SELLER.image} alt={BEST_SELLER.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold/10 rounded-2xl -z-10" />
-            <div className="absolute -top-4 -left-4 w-16 h-16 border border-gold/20 rounded-2xl -z-10" />
-            <div className="absolute -top-3 -right-3 bg-black/80 backdrop-blur-md rounded-full px-3 py-1.5 border border-gold/30">
-              <span className="flex items-center gap-1 text-[10px] text-gold">
-                <Coffee className="w-3 h-3" />
-                Limited Edition
-              </span>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

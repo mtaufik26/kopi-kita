@@ -38,7 +38,7 @@ export default function Navbar() {
                 <Coffee className="w-5 h-5 md:w-6 md:h-6 text-gold" />
               </motion.div>
               <span className="font-serif text-lg md:text-xl font-bold text-white">
-                Kopi<span className="text-gold">Nusantara</span>
+                Kopi<span className="text-gold">Kita</span>
               </span>
             </Link>
           </motion.div>

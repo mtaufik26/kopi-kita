@@ -1,13 +1,14 @@
 export const BEST_SELLER = {
-  badge: 'Best Seller',
-  title: 'Arabica Gayo',
-  subtitle: 'Premium',
+  badge: 'Lagi Banyak Dipesan',
+  title: 'Ice Latte Gayo',
+  subtitle: 'Fresh & Creamy',
   rating: 5,
-  reviews: '(500+ reviews)',
-  description: 'Dipilih sebagai favorit pelanggan karena profil rasa yang seimbang: cokelat, kacang, dan aftertaste yang bersih. Cocok untuk daily brew maupun manual brew.',
-  features: ['Medium Roast', 'Single Origin', 'Specialty Grade'],
-  price: 'Rp95.000',
-  originalPrice: 'Rp120.000',
-  stockInfo: 'Ready Stock • Free Shipping',
+  reviews: '(1K+ yang udah coba)',
+  description:
+    'Ice latte dengan kopi Gayo yang ringan dipadu susu creamy. Rasanya balance, dingin, dan enak diminum kapan aja tanpa bikin eneg.',
+  features: ['Ice Coffee', 'Fresh Brew', 'Gak Pahit'],
+  price: 'Rp18.000',
+  originalPrice: 'Rp25.000',
+  stockInfo: 'Tersedia di outlet',
   image: '/assets/1.png',
 };

@@ -6,22 +6,20 @@ export const FOOTER_LINKS = {
     { name: 'Kontak', href: '#contact' },
   ],
   contact: [
-    { icon: 'Phone', label: '+62 812 3456 7890', href: 'tel:+6281234567890' },
-    { icon: 'Mail', label: 'info@kopinusantara.com', href: 'mailto:info@kopinusantara.com' },
-    { icon: 'MapPin', label: 'Jakarta, Indonesia', href: null },
+    { icon: 'MapPin', label: 'Tersedia di berbagai lokasi', href: null },
+    { icon: 'Phone', label: 'Order via aplikasi (GoFood / GrabFood)', href: null },
   ],
   social: [
     { name: 'Instagram', icon: 'FaInstagram', href: '#' },
-    { name: 'Facebook', icon: 'FaFacebook', href: '#' },
+    { name: 'TikTok', icon: 'FaTiktok', href: '#' },
     { name: 'Twitter', icon: 'FaTwitter', href: '#' },
   ],
 };
 
 export const ICON_MAP = {
-  Phone: 'Phone',
-  Mail: 'Mail',
   MapPin: 'MapPin',
+  Phone: 'Phone',
   FaInstagram: 'FaInstagram',
-  FaFacebook: 'FaFacebook',
+  FaTiktok: 'FaTiktok',
   FaTwitter: 'FaTwitter',
 };
